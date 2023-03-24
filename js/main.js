@@ -46,13 +46,14 @@ const displayCountries = countries =>{
 // }
 
 // Option 2
-const getCountryHTML = ({name , capital , flags}) =>{
+const getCountryHTML = ({name , capital ,continents, flags}) =>{
     // destructuring-->in the parameter
     // const {name , capital , flags} = country;
     return `
         <div class="country">
-            <h3>${name.common}</h3>
+            <h2>${name.common}</h2>
             <p>${capital?.[0]}</p>
+            <h3>Region : ${continents?.[0]}</h3>
             <img src = "${flags.png}">
         </div>`
 }
